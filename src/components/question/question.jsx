@@ -10,6 +10,7 @@ const Question = ({
     correctAnswer,
     setCorrectAnswer,
 }) => {
+    console.log(typeof answer);
     return (
         <div className="question">
             <h2 className="question-header">
