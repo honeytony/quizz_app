@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/quizz_app/static/css/main.abd45e07.css",
-    "main.js": "/quizz_app/static/js/main.548c0bb5.js",
+    "main.js": "/quizz_app/static/js/main.b0c16396.js",
     "static/js/787.27e7084d.chunk.js": "/quizz_app/static/js/787.27e7084d.chunk.js",
     "static/media/CoFoRobert-RegularItalic.woff": "/quizz_app/static/media/CoFoRobert-RegularItalic.177dfd25f2a2b84f124d.woff",
     "static/media/CoFoSans-Bold.woff": "/quizz_app/static/media/CoFoSans-Bold.96e709565b5939454c87.woff",
@@ -10,11 +10,11 @@
     "static/media/CoFoSans-Regular.woff": "/quizz_app/static/media/CoFoSans-Regular.63c6d04f4310df52fc9a.woff",
     "index.html": "/quizz_app/index.html",
     "main.abd45e07.css.map": "/quizz_app/static/css/main.abd45e07.css.map",
-    "main.548c0bb5.js.map": "/quizz_app/static/js/main.548c0bb5.js.map",
+    "main.b0c16396.js.map": "/quizz_app/static/js/main.b0c16396.js.map",
     "787.27e7084d.chunk.js.map": "/quizz_app/static/js/787.27e7084d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd45e07.css",
-    "static/js/main.548c0bb5.js"
+    "static/js/main.b0c16396.js"
   ]
 }
