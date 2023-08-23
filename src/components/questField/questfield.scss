@@ -1,0 +1,51 @@
+.quest-field {
+    position: relative;
+    min-height: calc(100vh - 60px);
+    .wrong,
+    .correct {
+        animation: showToUp 1s ease-in-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px 10px;
+
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .title {
+            font-family: 'Cofo Bold';
+            font-size: 24.773px;
+        }
+        button {
+            border: none;
+            background: transparent;
+            font-family: 'Cofo Bold';
+            font-size: 18px;
+            color: #68bcf9;
+            &::after {
+                background-color: #68bcf9;
+                height: 2px;
+                width: 100%;
+                display: block;
+                content: '';
+            }
+            margin-bottom: 20px;
+        }
+    }
+    .wrong {
+        border: 6px solid #ff6262;
+
+        .title {
+            color: #ff6262;
+        }
+    }
+    .correct {
+        border: 6px solid #269d75;
+        .title {
+            color: #269d75;
+        }
+    }
+}

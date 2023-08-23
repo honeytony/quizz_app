@@ -1,0 +1,56 @@
+.question {
+    &-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 28px;
+        font-family: 'Cofo Bold';
+        &-number {
+            font-size: 48px;
+        }
+    }
+    .description {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #656565;
+        max-width: 265px;
+    }
+    .answers {
+        margin-top: 35px;
+        margin-left: 20px;
+        button {
+            border: none;
+            background: transparent;
+            font-size: 18px;
+            width: 85%;
+            margin-left: 10%;
+            text-align: left;
+        }
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            list-style: none;
+            li {
+                position: relative;
+            }
+            li:before {
+                position: absolute;
+                left: -5px;
+                top: 50%;
+                font-family: 'Cofo Italic';
+                font-size: 20px;
+                transform: translateY(-50%);
+            }
+            li:nth-child(1)::before {
+                content: 'а';
+            }
+            li:nth-child(2)::before {
+                content: 'б';
+            }
+            li:nth-child(3)::before {
+                content: 'в';
+            }
+        }
+    }
+}
