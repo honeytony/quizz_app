@@ -34,7 +34,6 @@ body {
     max-height: 800px;
     margin: 0 auto;
     padding: 20px 12px;
-    overflow: hidden;
 }
 html,
 body {
@@ -50,8 +49,8 @@ code {
 }
 
 .box {
-    width: 221px;
-    height: 245px;
+    width: 421px;
+    height: 445px;
     transform: rotate(13.027deg);
     flex-shrink: 0;
     display: block;
@@ -61,14 +60,26 @@ code {
     animation: hover 4s infinite ease-in-out;
 }
 .blue-box {
+    animation-delay: 1s;
     background: #bdddf4;
-    right: -50%;
-    top: -15%;
+    right: -200px;
+    top: -200px;
 }
 .pink-box {
     background: #fec0c3;
-    bottom: -15%;
-    left: -50%;
+    bottom: -200px;
+    left: -200px;
+}
+
+@media screen and (max-width: 400px) {
+    .blue-box {
+        right: -300px;
+        top: -200px;
+    }
+    .pink-box {
+        bottom: -200px;
+        left: -300px;
+    }
 }
 
 button.link {
@@ -79,6 +90,7 @@ button.link {
     color: #68bcf9;
     display: block;
     margin-bottom: 20px;
+    margin: 10px auto;
 }
 button.link::after {
     background-color: #68bcf9;
@@ -102,10 +114,10 @@ button.link::after {
         transform: translateY(0) rotate(13.027deg);
     }
     25% {
-        transform: translateY(-3px) rotate(11.027deg);
+        transform: translateY(-6px) rotate(11.027deg);
     }
     75% {
-        transform: translateY(3px) rotate(14.027deg);
+        transform: translateY(6px) rotate(14.027deg);
     }
     100% {
         transform: translateY(0) rotate(13.027deg);

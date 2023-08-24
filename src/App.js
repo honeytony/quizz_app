@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react';
 import { Questions } from './questions.js';
 import Questfield from './components/questField/questfield';
 import Menu from './components/menu/menu';
-
-function getRandom() {
-    return Math.random() - 0.5;
-}
+import { getRandom, prepareQuestions } from './utils/utils.js';
+import Result from './components/result/result.jsx';
 
 function App() {
     const [questions, setQuestions] = useState([]);
@@ -14,9 +12,9 @@ function App() {
     const [currentQuest, setCurrentQuest] = useState({});
     const [points, setPoints] = useState(0);
     const [correctAnswer, setCorrectAnswer] = useState(null);
-    const [answer, setAnswer] = useState(undefined);
+    const [answer, setAnswer] = useState();
     const [canAnswer, setCanAnswer] = useState(true);
-
+    const [wrongAnswers, setWrongAnswers] = useState([]);
     const getAnswer = (answer) => {
         if (canAnswer) {
             if (answer) {
@@ -39,8 +37,7 @@ function App() {
             setCountQuest(countQuest + 1);
 
             setAnswer(undefined);
-
-            questions[index].answers.forEach((el) => {
+            questions[index].answers.sort(getRandom).forEach((el) => {
                 if (el.correct) setCorrectAnswer(el.text);
             });
         }
@@ -48,6 +45,7 @@ function App() {
     const handleReset = () => {
         setMode('menu');
         setQuestions(Questions.sort(getRandom));
+        setWrongAnswers([]);
         setCountQuest(0);
         setPoints(0);
     };
@@ -68,12 +66,14 @@ function App() {
             );
         case 'learn-final':
             return (
-                <>
-                    Тест пройден. Результат - {(points / questions.length) * 100}%
-                    <button className="link" onClick={() => handleReset()}>
-                        В меню
-                    </button>
-                </>
+                <div className="App">
+                    <Result
+                        points={(points / questions.length) * 100}
+                        questlen={questions.length}
+                        wrongAnswers={wrongAnswers}
+                        handleReset={handleReset}
+                    />
+                </div>
             );
         case 'learn':
             return (
@@ -86,6 +86,8 @@ function App() {
                         correctAnswer={correctAnswer}
                         setCorrectAnswer={setCorrectAnswer}
                         setQuest={setQuest}
+                        wrongAnswers={wrongAnswers}
+                        setWrongAnswers={setWrongAnswers}
                     />
                 </div>
             );

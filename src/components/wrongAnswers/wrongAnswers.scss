@@ -1,0 +1,23 @@
+.wrong-answers {
+    h3 {
+        margin: 20px 0px;
+    }
+
+    ol {
+        margin-left: 20px;
+        ul {
+            margin-left: 20px;
+            margin-top: 20px;
+            list-style: none;
+            li {
+                margin-top: 10px;
+                .wrong {
+                    color: red;
+                }
+                .correct {
+                    color: green;
+                }
+            }
+        }
+    }
+}

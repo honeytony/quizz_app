@@ -18,6 +18,7 @@
     .answers {
         margin-top: 35px;
         margin-left: 20px;
+
         button {
             border: none;
             background: transparent;
@@ -25,13 +26,14 @@
             width: 85%;
             margin-left: 10%;
             text-align: left;
+            &.wrong-btn {
+                color: #ff6262;
+            }
+            &.correct-btn {
+                color: #269d75;
+            }
         }
-        .wrong-btn {
-            color: #ff6262;
-        }
-        .correct-btn {
-            color: #269d75;
-        }
+
         ol {
             display: flex;
             flex-direction: column;

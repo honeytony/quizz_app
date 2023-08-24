@@ -10,6 +10,8 @@ const Questfield = ({
     setAnswer,
     correctAnswer,
     setCorrectAnswer,
+    wrongAnswers,
+    setWrongAnswers,
 }) => {
     return (
         <div className="quest-field">
@@ -26,6 +28,8 @@ const Questfield = ({
                 question={currentQuest}
                 answer={answer}
                 setQuest={setQuest}
+                wrongAnswers={wrongAnswers}
+                setWrongAnswers={setWrongAnswers}
             />
         </div>
     );
