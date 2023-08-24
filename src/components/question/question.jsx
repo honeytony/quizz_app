@@ -48,7 +48,6 @@ const Question = ({
                                                 el.title = question.title;
                                                 el.wrong = correctAnswer;
                                                 setWrongAnswers((prev) => [...prev, el]);
-                                                console.log('wrongAnsw->', wrongAnswers);
                                             }
                                             setAnswer(el.correct);
                                         }}>

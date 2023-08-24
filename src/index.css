@@ -30,7 +30,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    height: 100vh;
+    height: calc(100lvh - 40px);
     max-height: 800px;
     margin: 0 auto;
     padding: 20px 12px;

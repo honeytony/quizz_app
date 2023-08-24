@@ -2,10 +2,6 @@ import React, { useEffect } from 'react';
 import './wrongAnswers.scss';
 
 const WrongAnswers = ({ wrongAnswers = [] }) => {
-    useEffect(() => {
-        console.log(wrongAnswers);
-    }, [wrongAnswers]);
-
     return (
         <div className="wrong-answers">
             <h3>Неправильные ответы:</h3>
