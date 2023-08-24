@@ -30,7 +30,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    height: calc(100mvh - 40px);
+    height: calc(100lvh - 40px);
     margin: 0 auto;
     padding: 20px 12px;
 }
@@ -46,7 +46,9 @@ code {
 #root {
     height: inherit;
 }
-
+.App {
+    height: inherit;
+}
 .box {
     width: 421px;
     height: 445px;
